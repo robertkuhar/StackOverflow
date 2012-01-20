@@ -7,6 +7,14 @@ import java.util.regex.*;
 
 import org.junit.*;
 
+/**
+ * Develop RegEx to extract integer values from a string.
+ * 
+ * http://stackoverflow.com/questions/8919786/matcher-find-matches-too-much
+ * 
+ * @author bobk
+ * 
+ */
 public class JustTheDigits {
 
     @Test
@@ -22,17 +30,14 @@ public class JustTheDigits {
         assertEquals( expected, actual );
     }
 
-    private static Pattern pattern = Pattern.compile( "(\\d+)?" );
+    private static Pattern pattern = Pattern.compile( "(\\d+)" );
 
     public List<Integer> justTheDigits( String input ) {
         List<Integer> listOfDigits = new ArrayList<Integer>();
         Matcher matcher = pattern.matcher( input );
         while ( matcher.find() ) {
             String s = matcher.group( 1 );
-            // Why more find()s than actual matches?
-            if ( s != null && "".equals( s ) == false ) {
-                listOfDigits.add( Integer.parseInt( s ) );
-            }
+            listOfDigits.add( Integer.parseInt( s ) );
         }
         return listOfDigits;
     }
