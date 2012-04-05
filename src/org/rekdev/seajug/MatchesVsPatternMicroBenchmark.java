@@ -50,7 +50,7 @@ public class MatchesVsPatternMicroBenchmark {
             if ( npaPattern.matcher( testCase.npa ).matches()
                     && nxxPattern.matcher( testCase.nxx ).matches()
                     && linePattern.matcher( testCase.line ).matches() ) {
-                ; // noop;
+                ; // noop
             }
             long endTime = System.currentTimeMillis();
             return endTime - startTime;
@@ -106,7 +106,7 @@ public class MatchesVsPatternMicroBenchmark {
             winner = "none";
         }
         String summary = String.format(
-                "iterations: %6d, totalForMatcherMatches: %4dms, totalForStringMatches: %4dms, winner: %s by %4dms or %6.2f%%",
+                "iterations: %6d, MatcherDotMatches: %3d, StringDotMatches: %3d, %s wins by %3dms or %6.2f%%",
                 iterations,
                 totalForMatcherMatches,
                 totalForStringMatches,
