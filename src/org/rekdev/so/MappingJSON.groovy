@@ -24,8 +24,8 @@ originals.each { orig ->
 
     def builder = new JsonBuilder()
     builder { 
-        common_name parsed.name.common ?: ""
-        latin_name parsed.name.latin ?: ""
+        common_name parsed.name.common
+        latin_name parsed.name.latin
         limbs {
             legs parsed.legs ?: 0
             arms parsed.arms ?: 0
