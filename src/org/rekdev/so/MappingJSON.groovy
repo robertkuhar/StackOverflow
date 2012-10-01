@@ -32,6 +32,6 @@ originals.each { orig ->
         }
     }
 
-    def normalized = builder.toPrettyString()
+    def normalized = builder.toString()
     println "$normalized"
 }
