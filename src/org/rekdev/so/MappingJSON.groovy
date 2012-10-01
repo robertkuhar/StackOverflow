@@ -12,10 +12,10 @@ import groovy.json.JsonSlurper
  * 
  */
 def originals = [
-    '{ \"name\": { \"common\": \"Tiger\", \"latin\": \"Panthera tigris\" }, \"legs\": 4 }',
-    '{ \"name\": { \"common\": \"Gecko\", \"latin\": \"Gek-onero\" }, \"legs\": 4, \"arms\": 0 }',
-    '{ \"name\": { \"common\": \"Liger\" }, \"legs\": 4, \"wings\": 2 }',
-    '{ \"name\": { \"common\": \"Human\", \"latin\": \"Homo Sapien\" }, \"legs\": 2, \"arms\": 2 }'
+    '{ "name": { "common": "Tiger", "latin": "Panthera tigris" }, "legs": 4 }',
+    '{ "name": { "common": "Gecko", "latin": "Gek-onero" }, "legs": 4, "arms": 0 }',
+    '{ "name": { "common": "Liger" }, "legs": 4, "wings": 2 }',
+    '{ "name": { "common": "Human", "latin": "Homo Sapien" }, "legs": 2, "arms": 2 }'
     ]
 originals.each { orig ->
     
