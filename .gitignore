@@ -12,6 +12,7 @@
 # Gradle
 .gradle/
 /build
+/test-output
 
 # Emacs backup files
 *~
