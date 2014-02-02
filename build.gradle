@@ -1,0 +1,25 @@
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+defaultTasks 'clean', 'build'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.3'
+
+    // Logback dependencies    
+    compile 'org.slf4j:slf4j-api:1.6.4'
+    compile 'ch.qos.logback:logback-core:1.0.3'
+    compile 'ch.qos.logback:logback-classic:1.0.3'
+    
+    compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
+    
+    compile 'joda-time:joda-time:2.1'
+
+    testCompile 'org.testng:testng:6.3'
+    testCompile 'org.mockito:mockito-all:1.9.0'
+}

@@ -1,19 +1,19 @@
 package org.rekdev.so;
 
+import static org.testng.AssertJUnit.*;
+
 import java.util.regex.*;
 
-import junit.framework.*;
+import org.testng.annotations.*;
 
 /**
- * Answer to Stack Overflow question
- * http://stackoverflow.com/questions/9272236/regex
- * -expression-for-finding-two-words-in-a-string
- * "Regex for finding two words in a string"
+ * Answer to Stack Overflow question http://stackoverflow.com/questions/9272236/regex
+ * -expression-for-finding-two-words-in-a-string "Regex for finding two words in a string"
  * 
  * @author robertkuhar
  * 
  */
-public class RegEx20120213 extends TestCase {
+public class RegEx20120213 {
 
     static class TestData {
         final String data;
@@ -25,14 +25,14 @@ public class RegEx20120213 extends TestCase {
         }
     }
 
+    @Test
     public void testIsolateJohnDoe() throws Exception {
-        TestData[] candidates =
-                {
-                        new TestData( "John\tDoe\t123", "John Doe" ),
-                        new TestData( "John Doe 123", "John Doe" ),
-                        new TestData( "John\t\tDoe\t\t123", "John Doe" ),
-                        new TestData( "John \tDoe \t123", "John Doe" ),
-                        new TestData( "Mary Jane Smokes", "" ) };
+        TestData[] candidates = {
+                new TestData( "John\tDoe\t123", "John Doe" ),
+                new TestData( "John Doe 123", "John Doe" ),
+                new TestData( "John\t\tDoe\t\t123", "John Doe" ),
+                new TestData( "John \tDoe \t123", "John Doe" ),
+                new TestData( "Mary Jane Smokes", "" ) };
 
         for ( TestData candidate : candidates ) {
             String actual = isolateAndTrim( candidate.data );

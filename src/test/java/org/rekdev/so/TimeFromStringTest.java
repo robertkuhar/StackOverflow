@@ -1,11 +1,11 @@
 package org.rekdev.so;
 
-import static org.junit.Assert.*;
+import static org.testng.AssertJUnit.*;
 
 import java.text.*;
 import java.util.*;
 
-import org.junit.*;
+import org.testng.annotations.*;
 
 public class TimeFromStringTest {
 

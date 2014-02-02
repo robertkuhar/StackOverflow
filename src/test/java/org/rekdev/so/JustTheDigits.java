@@ -1,11 +1,11 @@
 package org.rekdev.so;
 
-import static org.junit.Assert.*;
+import static org.testng.AssertJUnit.*;
 
 import java.util.*;
 import java.util.regex.*;
 
-import org.junit.*;
+import org.testng.annotations.*;
 
 /**
  * Develop RegEx to extract integer values from a string.
