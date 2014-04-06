@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.3'
+	compile 'org.codehaus.groovy:groovy-all:1.8.6'
 
     // Logback dependencies    
     compile 'org.slf4j:slf4j-api:1.6.4'
