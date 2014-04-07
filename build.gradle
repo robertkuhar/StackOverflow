@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-	compile 'org.codehaus.groovy:groovy-all:1.8.6'
+    compile 'org.codehaus.groovy:groovy-all:1.8.6'
 
     // Logback dependencies    
     compile 'org.slf4j:slf4j-api:1.6.4'
@@ -22,4 +22,19 @@ dependencies {
 
     testCompile 'org.testng:testng:6.3'
     testCompile 'org.mockito:mockito-all:1.9.0'
+}
+
+eclipse {
+    project {
+        natures.add 'org.eclipse.jdt.groovy.core.groovyNature'
+    }
+    classpath {
+        file {
+            withXml {
+                Node node = it.asNode()
+                node.appendNode('classpathentry',[exported:"true",kind:"con",path:"GROOVY_SUPPORT"]) 
+                node.appendNode('classpathentry',[exported:"true",kind:"con",path:"GROOVY_DSL_SUPPORT"])
+            }
+        }
+    }
 }
