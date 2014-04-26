@@ -19,6 +19,7 @@ dependencies {
     compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
     
     compile 'joda-time:joda-time:2.1'
+    compile 'org.apache.shiro:shiro-core:1.2.0'
 
     testCompile 'org.testng:testng:6.3'
     testCompile 'org.mockito:mockito-all:1.9.0'
