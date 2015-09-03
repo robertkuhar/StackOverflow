@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.6'
+    compile 'org.codehaus.groovy:groovy-all:1.8.6'
 
     // Logback dependencies    
     compile 'org.slf4j:slf4j-api:1.6.4'
@@ -20,6 +20,9 @@ dependencies {
     
     compile 'joda-time:joda-time:2.1'
     compile 'org.apache.shiro:shiro-core:1.2.0'
+    
+    compile 'org.springframework.data:spring-data-commons-core:1.4.1.RELEASE'
+    compile 'org.springframework.data:spring-data-mongodb:1.7.2.RELEASE'
 
     testCompile 'org.testng:testng:6.3'
     testCompile 'org.mockito:mockito-all:1.9.0'
